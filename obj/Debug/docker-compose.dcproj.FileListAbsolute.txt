@@ -1,0 +1,1 @@
+C:\Users\Valentin\source\repos\Blazor\obj\Debug\docker-compose.dcproj.CoreCompileInputs.cache

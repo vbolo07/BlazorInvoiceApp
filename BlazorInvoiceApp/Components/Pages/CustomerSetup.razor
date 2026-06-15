@@ -1,0 +1,16 @@
+﻿@page "/customersetup"
+@rendermode InteractiveServer
+
+<PageTitle>Customers Setup</PageTitle>
+<AuthorizeView>
+    <Authorized>
+        <CustomerSetupComponent/>
+    </Authorized>
+    <NotAuthorized>
+        Please log in to see the customer setup page!
+    </NotAuthorized>
+</AuthorizeView>
+
+@code {
+
+}

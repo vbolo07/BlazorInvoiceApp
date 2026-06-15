@@ -1,0 +1,16 @@
+﻿@page "/invoicetermssetup"
+@rendermode InteractiveServer
+<PageTitle>Invoice Terms Setup</PageTitle>
+<AuthorizeView>
+    <Authorized>
+        <InvoiceTermsSetupComponent />
+    </Authorized>
+    <NotAuthorized>
+        Please log in to see the Invoice terms!
+    </NotAuthorized>
+</AuthorizeView>
+
+
+@code {
+
+}

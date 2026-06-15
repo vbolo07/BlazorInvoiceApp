@@ -1,0 +1,62 @@
+name: dockercompose6358131647520595221
+services:
+  blazorappdb:
+    container_name: blazor-app-db
+    environment:
+      MYSQL_ROOT_PASSWORD: password@12345#
+    image: mysql
+    networks:
+      blazorapp: null
+    ports:
+      - mode: ingress
+        target: 1433
+        published: "8002"
+        protocol: tcp
+    restart: always
+  blazorinvoiceapp:
+    build:
+      context: C:\Users\Valentin\source\repos\Blazor
+      dockerfile: BlazorInvoiceApp/Dockerfile
+    container_name: blazor-invoice-app
+    depends_on:
+      blazorappdb:
+        condition: service_started
+        required: true
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_HTTP_PORTS: "8080"
+      ASPNETCORE_HTTPS_PORTS: "8081"
+      DB_HOST: blazorappdb
+      DB_NAME: BlazorAppDB
+      DB_SA_PASSWORD: password@12345#
+    image: blazorinvoiceapp
+    networks:
+      blazorapp: null
+    ports:
+      - mode: ingress
+        target: 8080
+        published: "8001"
+        protocol: tcp
+      - mode: ingress
+        target: 8080
+        protocol: tcp
+      - mode: ingress
+        target: 8081
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: C:\Users\Valentin\AppData\Roaming/Microsoft/UserSecrets
+        target: /home/app/.microsoft/usersecrets
+        read_only: true
+        bind:
+          create_host_path: true
+      - type: bind
+        source: C:\Users\Valentin\AppData\Roaming/ASP.NET/Https
+        target: /home/app/.aspnet/https
+        read_only: true
+        bind:
+          create_host_path: true
+networks:
+  blazorapp:
+    name: blazorapp
+    external: true
