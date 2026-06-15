@@ -7,6 +7,11 @@ services:
 
   sqlserver:
     image: mcr.microsoft.com/mssql/server:2022-latest
+    healthcheck:
+        test: ["CMD", "/opt/mssql-tools/bin/sqlcmd", "-S", "localhost", "-U", "sa", "-P", "YourStrongPassword123!", "-Q", "SELECT 1"]
+        interval: 10s
+        timeout: 5s
+        retries: 10
     container_name: blazor-sql
     environment:
       ACCEPT_EULA: "Y"
@@ -24,7 +29,8 @@ services:
     ports:
       - "8001:8080"
     depends_on:
-      - sqlserver
+      sqlserver:
+        condition: service_healthy
     environment:
       - DEMO_EMAIL=demo@test.com
       - DEMO_PASSWORD=Demo123!
