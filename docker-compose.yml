@@ -28,6 +28,8 @@ services:
     environment:
       - DEMO_EMAIL=demo@test.com
       - DEMO_PASSWORD=Demo123!
+      - ASPNETCORE_URLS=http://+:8080
+      - ASPNETCORE_HTTP_PORTS=8080
   
 
 volumes:
