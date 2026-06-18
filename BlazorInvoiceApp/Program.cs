@@ -87,14 +87,38 @@ app.MapRazorComponents<App>()
 // Add additional endpoints required by the Identity /Account Razor components.
 app.MapAdditionalIdentityEndpoints();
 
-//This is only for the container run to create database schema from migrations
-using (var scope = app.Services.CreateScope())
+// This is only for container startup to wait for SQL Server
+var retries = 10;
+var delay = TimeSpan.FromSeconds(5);
+
+for (int attempt = 1; attempt <= retries; attempt++)
 {
-    var db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+    try
+    {
+        using var scope = app.Services.CreateScope();
 
-    db.Database.Migrate();
+        var db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
 
-    await ApplicationDbInitializer.SeedAsync(scope.ServiceProvider);
+        await db.Database.MigrateAsync();
+
+        await ApplicationDbInitializer.SeedAsync(scope.ServiceProvider);
+
+        Console.WriteLine("Database migration and seeding completed.");
+
+        break;
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine(
+            $"Database not ready. Attempt {attempt}/{retries}. Error: {ex.Message}");
+
+        if (attempt == retries)
+        {
+            throw;
+        }
+
+        await Task.Delay(delay);
+    }
 }
 
 app.Run();
