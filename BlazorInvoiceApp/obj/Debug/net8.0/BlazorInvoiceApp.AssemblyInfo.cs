@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BlazorInvoiceApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+de3d1bfbc4f64e23406c9abb1eea2e0eb1eaa233")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e6fb4af3c26a51ac174bd1a1a45e8599b09216c6")]
 [assembly: System.Reflection.AssemblyProductAttribute("BlazorInvoiceApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BlazorInvoiceApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
