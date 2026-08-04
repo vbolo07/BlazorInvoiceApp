@@ -5,18 +5,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{B7BB347C-9D80-4B84-AB7A-D6598A5DBA3D}|BlazorInvoiceApp\\BlazorInvoiceApp.csproj|c:\\users\\valentin\\source\\repos\\blazor\\blazorinvoiceapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B7BB347C-9D80-4B84-AB7A-D6598A5DBA3D}|BlazorInvoiceApp\\BlazorInvoiceApp.csproj|solutionrelative:blazorinvoiceapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B7BB347C-9D80-4B84-AB7A-D6598A5DBA3D}|BlazorInvoiceApp\\BlazorInvoiceApp.csproj|c:\\users\\valentin\\source\\repos\\blazor\\blazorinvoiceapp\\data\\applicationdbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B7BB347C-9D80-4B84-AB7A-D6598A5DBA3D}|BlazorInvoiceApp\\BlazorInvoiceApp.csproj|solutionrelative:blazorinvoiceapp\\data\\applicationdbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{65A020AD-C111-4BAB-9BFC-E6CC9E0FDA0E}|docker-compose.dcproj|c:\\users\\valentin\\source\\repos\\blazor\\docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{65A020AD-C111-4BAB-9BFC-E6CC9E0FDA0E}|docker-compose.dcproj|solutionrelative:docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B7BB347C-9D80-4B84-AB7A-D6598A5DBA3D}|BlazorInvoiceApp\\BlazorInvoiceApp.csproj|c:\\users\\valentin\\source\\repos\\blazor\\blazorinvoiceapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{B7BB347C-9D80-4B84-AB7A-D6598A5DBA3D}|BlazorInvoiceApp\\BlazorInvoiceApp.csproj|solutionrelative:blazorinvoiceapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,46 +14,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ApplicationDbInitializer.cs",
-              "DocumentMoniker": "C:\\Users\\Valentin\\source\\repos\\Blazor\\BlazorInvoiceApp\\Data\\ApplicationDbInitializer.cs",
-              "RelativeDocumentMoniker": "BlazorInvoiceApp\\Data\\ApplicationDbInitializer.cs",
-              "ToolTip": "C:\\Users\\Valentin\\source\\repos\\Blazor\\BlazorInvoiceApp\\Data\\ApplicationDbInitializer.cs",
-              "RelativeToolTip": "BlazorInvoiceApp\\Data\\ApplicationDbInitializer.cs",
-              "ViewState": "AgIAAIwAAAAAAAAAAAAYwK0AAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-14T14:06:52.76Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "docker-compose.yml",
-              "DocumentMoniker": "C:\\Users\\Valentin\\source\\repos\\Blazor\\docker-compose.yml",
-              "RelativeDocumentMoniker": "docker-compose.yml",
-              "ToolTip": "C:\\Users\\Valentin\\source\\repos\\Blazor\\docker-compose.yml",
-              "RelativeToolTip": "docker-compose.yml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
-              "WhenOpened": "2026-06-11T13:56:41.283Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Valentin\\source\\repos\\Blazor\\BlazorInvoiceApp\\appsettings.json",
-              "RelativeDocumentMoniker": "BlazorInvoiceApp\\appsettings.json",
-              "ToolTip": "C:\\Users\\Valentin\\source\\repos\\Blazor\\BlazorInvoiceApp\\appsettings.json",
-              "RelativeToolTip": "BlazorInvoiceApp\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-06-11T13:54:12.702Z"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -74,9 +24,9 @@
               "RelativeDocumentMoniker": "BlazorInvoiceApp\\Program.cs",
               "ToolTip": "C:\\Users\\Valentin\\source\\repos\\Blazor\\BlazorInvoiceApp\\Program.cs",
               "RelativeToolTip": "BlazorInvoiceApp\\Program.cs",
-              "ViewState": "AgIAAFIAAAAAAAAAAAAAAGsAAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-10T17:34:25.364Z",
+              "WhenOpened": "2026-08-04T16:06:58.256Z",
               "EditorCaption": ""
             }
           ]

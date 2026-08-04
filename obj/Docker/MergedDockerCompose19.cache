@@ -1,0 +1,47 @@
+name: dockercompose6358131647520595221
+services:
+  blazorinvoiceapp:
+    build:
+      context: C:\Users\Valentin\source\repos\Blazor
+      dockerfile: BlazorInvoiceApp/Dockerfile
+    container_name: blazor-app
+    depends_on:
+      sqlserver:
+        condition: service_started
+        required: true
+    environment:
+      ASPNETCORE_HTTP_PORTS: "8080"
+      ASPNETCORE_URLS: http://+:8080
+      DEMO_EMAIL: demo@test.com
+      DEMO_PASSWORD: Demo123!
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 8080
+        published: "8001"
+        protocol: tcp
+  sqlserver:
+    container_name: blazor-sql
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_SA_PASSWORD: YourStrongPassword123!
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 1433
+        published: "1433"
+        protocol: tcp
+    volumes:
+      - type: volume
+        source: sql_data
+        target: /var/opt/mssql
+        volume: {}
+networks:
+  default:
+    name: dockercompose6358131647520595221_default
+volumes:
+  sql_data:
+    name: dockercompose6358131647520595221_sql_data

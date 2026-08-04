@@ -61,7 +61,8 @@ builder.Services.AddIdentityCore<ApplicationUser>(options => options.SignIn.Requ
     .AddDefaultTokenProviders();
 
 builder.Services.AddSingleton<IEmailSender<ApplicationUser>, IdentityNoOpEmailSender>();
-
+builder.Services.AddHealthChecks();
+   
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -120,5 +121,5 @@ for (int attempt = 1; attempt <= retries; attempt++)
         await Task.Delay(delay);
     }
 }
-
+app.MapHealthChecks("/health");
 app.Run();
